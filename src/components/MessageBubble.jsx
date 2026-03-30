@@ -30,8 +30,8 @@ export default function MessageBubble({direction, text}) {
   messageBubble: {
       borderRadius: 5,
       marginTop: 8,
-      marginRight: 10,
-      marginLeft: 10,
+      marginRight: 5,
+      marginLeft: 5,
       paddingHorizontal: 10,
       paddingVertical: 5,
       flexDirection:'row',

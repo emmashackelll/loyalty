@@ -9,7 +9,7 @@ export default function App() {
     return (
         <PaperProvider>
             <View style={styles.container}>
-                <Text>Hello from Rich</Text>
+                <Text>Emma's Cafe</Text>
                 <Portal>
                     <Dialog visible={visible} onDismiss={() => setVisible(false)}>
                         <Dialog.Title>Order Bot</Dialog.Title>
