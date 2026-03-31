@@ -6,14 +6,14 @@ export default function InputBar({ text, onChangeText, onSizeChange, onSendPress
 
     return (
         <View style={styles.inputBar}>
-            <TextInput 
-                style={styles.textBox}
-                ref={inputRef} // 3. Assign the ref correctly
-                multiline={true}
-                onChangeText={(text) => onChangeText(text)}
-                onContentSizeChange={onSizeChange}
-                value={text} 
-            />
+            <TextInput
+  style={styles.textBox}
+  ref={inputRef}
+  multiline={true}
+  onChangeText={(text) => onChangeText(text)}
+  onContentSizeChange={onSizeChange}
+  value={text}
+/>
             <TouchableHighlight 
                 style={styles.sendButton} 
                 onPress={() => onSendPressed()}
@@ -25,29 +25,34 @@ export default function InputBar({ text, onChangeText, onSizeChange, onSendPress
 }
 
 const styles = StyleSheet.create({
-    inputBar: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        paddingHorizontal: 5,
-        paddingVertical: 3,
-        backgroundColor: '#f9f9f9' // Optional: adds visibility
-    },
-    textBox: {
-        borderRadius: 5,
-        borderWidth: 1,
-        borderColor: 'gray',
-        flex: 1,
-        fontSize: 16,
-        paddingHorizontal: 10,
-        backgroundColor: 'white'
-    },
-    sendButton: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        paddingLeft: 15,
-        marginLeft: 5,
-        paddingRight: 15,
-        borderRadius: 5,
-        backgroundColor: '#66db30'
-    },
+  inputBar: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    width: '100%',
+    paddingHorizontal: 8,
+    paddingVertical: 8,
+    backgroundColor: '#f9f9f9',
+  },
+
+  textBox: {
+    flex: 1,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: 'gray',
+    fontSize: 16,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    backgroundColor: 'white',
+    marginRight: 8,
+    minHeight: 44,
+  },
+
+  sendButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 8,
+    backgroundColor: '#ab30db',
+  },
 });

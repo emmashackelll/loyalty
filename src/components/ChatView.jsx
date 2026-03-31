@@ -85,15 +85,14 @@ const styles = StyleSheet.create({
 
   //ChatView
 
-  outer: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundColor: 'white'
-  },
+ outer: {
+  flex: 1,
+  backgroundColor: 'white',
+},
+messages: {
+  flex: 1,
+  width: '100%',
+},
 
-  messages: {
-    flex: 1
-  },
 
 })
