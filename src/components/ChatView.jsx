@@ -4,7 +4,7 @@ import MessageBubble from './MessageBubble';
 import InputBar from './InputBar';
 import { handleInput } from '../Order';
 
-export default function ChatView(){
+export default function ChatView({ onOrderComplete }){
   const [messages, setMessages] = useState([]);
   const [inputBarText, setInputBarText] = useState('');
   const scrollViewRef = useRef(null);
@@ -42,6 +42,15 @@ export default function ChatView(){
     // Correct way to update state: create a NEW array
     let newMessages = [{ direction: 'right', text: inputBarText }];
     const aResponse = handleInput(inputBarText);
+    if (
+  aResponse.some(message =>
+    message.toLowerCase().includes('your order will be ready for pickup in 10 minutes')
+  )
+) {
+  if (onOrderComplete) {
+    onOrderComplete();
+  }
+}
     for(const message of aResponse){
       newMessages.push({direction: "left", text: message});
     }

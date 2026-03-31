@@ -66,7 +66,7 @@ export default function Loyalty() {
           >
             <Dialog.Title>Order Bot</Dialog.Title>
             <Dialog.Content style={styles.dialogContent}>
-              <ChatView />
+              <ChatView onOrderComplete={addCoffee} />
             </Dialog.Content>
             <Dialog.Actions>
               <Button onPress={() => setVisible(false)}>Dismiss</Button>
