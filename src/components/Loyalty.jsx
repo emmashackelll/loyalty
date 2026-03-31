@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   filledCircle: {
-    backgroundColor: '#66db30',
+    backgroundColor: '#b930db',
   },
   emptyCircle: {
     backgroundColor: '#dddddd',
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 18,
     fontWeight: '700',
-    color: '#2e7d32',
+    color: '#7d2e76',
     marginBottom: 15,
   },
   buttonRow: {
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
   },
   actionButton: {
     flex: 1,
-    backgroundColor: '#66db30',
+    backgroundColor: '#9c30db',
     paddingVertical: 14,
     borderRadius: 10,
     alignItems: 'center',
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 20,
     bottom: 20,
-    backgroundColor: '#66db30',
+    backgroundColor: '#cd30db',
   },
   dialog: {
     alignSelf: 'center',
